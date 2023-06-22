@@ -1,0 +1,27 @@
+{
+  "name": "hbo-clone",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next build && next export"
+  },
+  "dependencies": {
+    "autoprefixer": "10.4.14",
+    "axios": "^1.4.0",
+    "gsap": "^3.12.1",
+    "local-storage": "^2.0.0",
+    "next": "13.4.5",
+    "next-transpile-modules": "^10.0.0",
+    "postcss": "8.4.24",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.63.3",
+    "tailwindcss": "3.3.2",
+    "uuid": "^9.0.0"
+  }
+}
