@@ -12,20 +12,10 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/[mediaType]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/[mediaType].js"
-    ],
     "/[mediaType]/[id]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/[mediaType]/[id].js"
-    ],
-    "/[mediaType]/genre/[genre_id]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/[mediaType]/genre/[genre_id].js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
