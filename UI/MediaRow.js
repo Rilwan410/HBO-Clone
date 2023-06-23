@@ -12,7 +12,6 @@ export default function MediaRow({ title, size, endpoint, category, mediaType, }
   const { loadingData, setLoadingData } = globalState;
   const [movies, setMovies] = useState([]);
 
-  // category === 'tv' ? `/tv/${id}` :
 
   function showThumbnails() {
     return loadingData

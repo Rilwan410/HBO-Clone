@@ -11,6 +11,7 @@ import Placeholder from "@/UI/Placeholder";
 
 export default function Home() {
   const router = useRouter();
+  
 
   return AuthCheck(
     <MainLayout>

@@ -23,6 +23,7 @@ export default function SingleMedia() {
         `https://api.themoviedb.org/3/${mediaType}/${id}%7D?api_key=1418807822dc08d848a20722bb586c6f`
       )
       .then((success) => {
+
         setData(success.data);
       })
       .catch((error) => {
@@ -33,10 +34,9 @@ export default function SingleMedia() {
   return AuthCheck(
     <MainLayout>
       <FeaturedMedia
-      statement = {id}
         linkURL={`${mediaType}/id`}
         title={mediaType === "movie" ? data.title : data.name}
-        location={mediaType === "tv" ? data.overview : data.tagline}
+        location={mediaType === "tv" || mediaType === "movie" ? data.overview : data.tagline }
         mediaURL={`https://image.tmdb.org/t/p/original/${data.backdrop_path}`}
         type="single"
       />

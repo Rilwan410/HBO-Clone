@@ -2,7 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
   "/[mediaType]/[id]": "pages/[mediaType]/[id].js",
+  "/[mediaType]/genre/[genre_id]": "pages/[mediaType]/genre/[genre_id].js",
   "/[mediaType]": "pages/[mediaType].js"
 }

@@ -42,7 +42,6 @@ export default function Home({ genresData, featuredData, context }) {
   // console.log(mediaType);
 
   return AuthCheck(
-    
     <MainLayout>
        <GenreNav
         mediaType={mediaType}
