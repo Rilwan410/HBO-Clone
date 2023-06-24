@@ -42,7 +42,7 @@ export default function HBOProvider({ children }) {
       
       setTimeout(() => {
         setAccountOpen(false);
-      }, 10000);
+      }, 2000);
     }
   }
   
@@ -58,7 +58,7 @@ export default function HBOProvider({ children }) {
       ls.set("myList", [video]);
     }
     
-    // watchAdded();
+    watchAdded();
   }
 
   function removeFromList(id) {

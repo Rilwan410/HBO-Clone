@@ -2,8 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/create": "pages/create.js",
+  "/[mediaType]/[id]": "pages/[mediaType]/[id].js",
   "/": "pages/index.js",
   "/login": "pages/login.js",
-  "/[mediaType]": "pages/[mediaType].js"
+  "/create": "pages/create.js"
 }

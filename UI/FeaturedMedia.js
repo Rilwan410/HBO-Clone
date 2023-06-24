@@ -21,7 +21,7 @@ export default function FeaturedMedia({
   function clickedAdd() {
     if (type === "genre") addToList({ id: dataID, genre, img: mediaURL });
     if (type === "single") addToList({ id: mediaID, img: mediaURL, genre });
-    console.log(watchlist);
+    // console.log(watchlist);
   }
 
   function clickedPlay() {
@@ -116,7 +116,7 @@ export default function FeaturedMedia({
         {/* Featured Media Description */}
         <div
           className="featured-media__bg bg-[linear-gradient(180deg,rgba(94,158,255,0)60%,rgba(68,61,156,.8)100%)] absolute w-full h-full z-2 flex px-[50px] items-end transition-opacity duration-500 opacity-0 ease-in-out hover:opacity-100"
-          onClick={() => setAccountOpen(false) } 
+          // onClick={() =>  setAccountOpen(false) } 
         >
           <div className={`featured-media__container `}>
             <div
@@ -126,6 +126,7 @@ export default function FeaturedMedia({
                 type === "single" ? "" : "cursor-pointer"
               }`}
               // onClick={`${ type === "single" ? '' : () => clickedPlay}`}
+              onClick = {() =>  setAccountOpen(false)}
             >
               {title}
             </div>
@@ -133,6 +134,7 @@ export default function FeaturedMedia({
               className={`featured-media__playing  ${
                 type === "genre" ? "text-[1rem]" : "text-[1.2rem]"
               } font-bold text-white mb-[.5rem]`}
+              onClick = {() =>  setAccountOpen(false)}
             >
               NOW PLAYING
             </div>
@@ -140,6 +142,7 @@ export default function FeaturedMedia({
               className={`featured-media__location ${
                 type === "genre" ? "text-[1rem]" : "text-[1.2rem]"
               } font-light text-white mb-8`}
+              onClick = {() =>  setAccountOpen(false)}
             >
               {location}
             </div>
