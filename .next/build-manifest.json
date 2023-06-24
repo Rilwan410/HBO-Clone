@@ -12,15 +12,10 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/": [
+    "/[mediaType]/genre/[genre_id]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/index.js"
-    ],
-    "/[mediaType]/[id]": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/[mediaType]/[id].js"
+      "static/chunks/pages/[mediaType]/genre/[genre_id].js"
     ],
     "/_app": [
       "static/chunks/webpack.js",
@@ -31,16 +26,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
-    ],
-    "/create": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/create.js"
-    ],
-    "/login": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/login.js"
     ]
   },
   "ampFirstPages": []

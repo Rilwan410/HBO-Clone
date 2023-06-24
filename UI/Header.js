@@ -25,7 +25,6 @@ useEffect(() => {
   
   ls('users').map(user => {
     if(user.id === ls('activeUID')) setUsername(user.user)
-    console.log(username)
   })
 
 },[])

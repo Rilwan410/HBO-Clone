@@ -11,10 +11,9 @@ const {accountOpen, setAccountOpen, watchlist, removeFromList} = globalState
 function showWatchList(){
   if (watchlist != null){
     return watchlist.map((video, index) => {
-      console.log(video)
     return(
       
-      <div className="account__watch-watch-video relative w-[220px] h-[220px] mr-[20px] rounded-[6px] overflow-hidden">
+      <div className="account__watch-watch-video relative w-[220px] h-[220px] mr-[20px] rounded-[6px] overflow-hidden" key={index}>
       <img src={video.img} className="w-[220px] h-[220px] rounded-[6px] " />
       <div className = "account__watch-overlay absolute top-0 left-0 bg-[linear-gradient(328deg,rgba(94,158,255,1)0%,rgba(119,30,135,1)100%,rgba(60,38,135,1)100%,rgba(60,38,184,1)100%,rgba(0,0,0,1)100%)] w-full h-full transition-opacity duration-[.4s] ease-in-out flex justify-center items-center opacity-0 hover:opacity-90">
           <div className = "account__watch-buttons flex gap-[15px] ">
