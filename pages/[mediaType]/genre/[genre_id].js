@@ -1,5 +1,3 @@
-import Login from "@/components/Login";
-import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import MainLayout from "@/components/mainLayout";
 import FeaturedMedia from "@/UI/FeaturedMedia";
@@ -29,6 +27,7 @@ export default function Genre({ context, featuredData, genresData }) {
         thumbnailSizes[Math.floor(Math.random() * thumbnailSizes.length)];
       return (
         <MediaRow
+        key = {index}
           category={mediaType}
           title={''}
           linkURL={`movie/id`}

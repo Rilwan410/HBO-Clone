@@ -4,8 +4,7 @@ import axios from "axios";
 import shuffleArray from "@/components/utilities";
 import Link from "next/link";
 import { useStateContext } from "@/HBOProvider";
-import Mounted from "./Mounted";
-import HBOProvider from "@/HBOProvider";
+
 
 export default function MediaRow({ title, size, endpoint, category, mediaType, }) {
   const globalState = useStateContext();
