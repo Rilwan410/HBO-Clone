@@ -20,7 +20,24 @@ export default function () {
   const globalState = useStateContext();
 
   //   Global State variables
-  let { userImage, user } = globalState;
+  let { userImage, user, circleColors } = globalState;
+
+
+
+  const [colors, setColors] = useState(circleColors.colorOne)
+
+
+  useEffect(() => {
+
+    if(ls('mainColor') == null){
+      setColors(circleColors.colorOne)
+    }else {
+      setColors(ls('mainColor'))
+      
+    
+  }
+
+  })
 
   function selectUser(id) {
     ls("activeUID", id);
@@ -32,7 +49,7 @@ export default function () {
     if (loadingUsers) {
       return users.map((user) => {
         return (
-          <div className="login-user__user-box flex flex-col items-center justify-center cursor-pointer" onClick={() => selectUser(user.id)} key = {user.id} >
+          <div className="login-user__user-box flex flex-col items-center pt-[20px] justify-center cursor-pointer" onClick={() => selectUser(user.id)} key = {user.id} >
             <img
               className="login-user__user-img w-[125px] h-[125px] rounded-[50%] mb-4 object-cover object-center border-[rgb(132,0,255)] border-[3px]"
               src={userImage}
@@ -49,7 +66,7 @@ function createUser(){
 }
   return (
     <>
-      <div className="login-user h-screen flex justify-between items-center flex-col">
+      <div className={`${colors} h-screen flex justify-between items-center flex-col`}>
         <div className=" login-user__top flex items-center justify-center flex-col mt-8">
           <div className="login-user__logo h-[22px] w-[129px] scale-90 mb-4" />
           <span className="login-user__title text-[2rem]">

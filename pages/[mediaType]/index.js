@@ -51,10 +51,9 @@ export default function Home({ genresData, featuredData, context }) {
       <FeaturedMedia
       
         genre={mediaType}
-        dataID = {featuredData}
+        dataID = {featuredData.id}
         type={"genre"}
         linkURL={`${mediaType}/${featuredData.id}`}
-        ire
         mediaURL={`https://image.tmdb.org/t/p/original/${featuredData.backdrop_path}`}
         title={`${mediaType === "tv" ? featuredData.name : featuredData.title}`}
         location={featuredData.overview}

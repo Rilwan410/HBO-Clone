@@ -39,6 +39,8 @@ export default function SingleMedia() {
         location={mediaType === "tv" || mediaType === "movie" ? data.overview : data.tagline }
         mediaURL={`https://image.tmdb.org/t/p/original/${data.backdrop_path}`}
         type="single"
+        genre = {mediaType}
+        mediaID = {id}
       />
       {/* <LazyLoad
         offset={-400}
@@ -51,6 +53,7 @@ export default function SingleMedia() {
         size={"small-v"}
         endpoint={`${mediaType}/${id}/similar?`}
         mediaType={mediaType}
+        
       />
       {/* </LazyLoad> */}
       <CastInfo mediaID={id} mediaType={mediaType} />

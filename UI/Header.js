@@ -3,8 +3,12 @@ import SearchModal from "./SearchModal";
 import { useStateContext } from "@/HBOProvider";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import ls from 'local-storage'
+import { useEffect, useState } from "react";
 export default function Header({}) {
   const router = useRouter();
+  
+const [username, setUsername] = useState('')
 
   function sideNavigation() {
     setSideNav(!sideNav);
@@ -17,7 +21,14 @@ export default function Header({}) {
   function showAccount() {
     setAccountOpen(!accountOpen);
   }
+useEffect(() => {
+  
+  ls('users').map(user => {
+    if(user.id === ls('activeUID')) setUsername(user.user)
+    console.log(username)
+  })
 
+},[])
   const globalState = useStateContext();
   const {
     userImage,
@@ -55,7 +66,7 @@ export default function Header({}) {
           src={userImage}
           onClick={showAccount}
         />
-        <div className="top-header__user-name">Susan</div>
+        <div className="top-header__user-name">{username}</div>
       </div>
       <Account />
       <SearchModal />

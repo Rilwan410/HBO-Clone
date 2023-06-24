@@ -51,6 +51,7 @@ export default function Genre({ context, featuredData, genresData }) {
       />
       <FeaturedMedia
         genre={mediaType}
+        featuredID = {featuredData.id}
         dataID={featuredData}
         type={"genre"}
         linkURL={`/${mediaType}/${featuredData.id}`}

@@ -2,6 +2,7 @@ import { useStateContext } from "@/HBOProvider";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function SearchModal() {
   const globalState = useStateContext();
@@ -11,6 +12,9 @@ export default function SearchModal() {
   const [showResults, setShowResults] = useState(false);
   const [text, setText] = useState("");
 
+
+  const router = useRouter()
+
   // POPULAR DATA //
   useEffect(() => {
     axios
@@ -18,10 +22,8 @@ export default function SearchModal() {
         `https://api.themoviedb.org/3/discover/movie?primary_release_year=2023&api_key=1418807822dc08d848a20722bb586c6f&language=en-US`
       )
       .then((data) => {
-        // console.log(data.data.results)
         setPopular(data.data.results.slice(0, 15));
         setShowResults(false);
-        // console.log('popdata', data.data.results)
       })
       .catch((error) => {
         console.log("ERROR:", error);
@@ -102,13 +104,13 @@ export default function SearchModal() {
 
 function PopularResult({ popular, closeModal }) {
   return popular.map((item, index) => {
-    console.log(item);
-    // // console.log(item.media_type)
-    // console.log(item.id)
-    // console.log(item.poster_path)
+    // console.log(item);
+    // // // console.log(item.media_type)
+    // // console.log(item.id)
+    // // console.log(item.poster_path)
     // https://image.tmdb.org/t/p/
     return (
-      <Link href={`/${item.media_type}/${item.id}`} key={index}>
+      <Link href={`/${'movie'}/${item.id}`} key={index} onClick = {closeModal}>
         <div className="search-modal__thumbnail opacity-0 flex-none w-[240px] h-[360px] relative">
           <img
             src={`https://image.tmdb.org/t/p/w185${item.poster_path}`}
