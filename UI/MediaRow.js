@@ -22,7 +22,7 @@ export default function MediaRow({ title, size, endpoint, category, mediaType, }
             <Link key = {v4()} href={`${category === "tv" || mediaType === 'tv' ? `/tv/${id}` : `/movie/${id}`}`}>
               <Thumbnail movieData={movie} size={size}  />
             </Link>
-          );
+          );cc
         });
   }
 
